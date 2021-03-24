@@ -1,18 +1,14 @@
-{
+console.log('process.env.database_url : >>', process.env.DATABASE_URL)
+module.exports = {
   "type": "postgres",
-  "host": "localhost",
-  "port": 5433,
-  "username": "postgres",
-  "password": "docker",
-  "database": "ormestudos",
+  "url": process.env.DATABASE_URL,
   "entities": [
     "src/models/**/*.ts"
- ],
- "dropSchema": true,
- "migrations": [
+  ],
+  "migrations": [
   "src/migrations/**/*.ts"
 ],
- "cli":{
+  "cli":{
   "migrationsDir": [
     "src/migrations/"
   ],

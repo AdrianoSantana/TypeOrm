@@ -12,9 +12,9 @@ export default class Student {
   })
   name: string
 
-  @CreateDateColumn()
-  createdAt: string
-  
-  @UpdateDateColumn()
-  updatedAt: string
+  @CreateDateColumn({ name: 'created_At' })
+  createdAt: Date
+
+  @UpdateDateColumn({ name: 'updated_At' })
+  updatedAt: Date
 }

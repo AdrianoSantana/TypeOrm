@@ -13,9 +13,9 @@ export default class Lesson {
   })
   description: string
 
-  @CreateDateColumn()
+  @CreateDateColumn({ name: 'created_At' })
   createdAt: Date
 
-  @UpdateDateColumn()
+  @UpdateDateColumn({ name: 'updated_At' })
   updatedAt: Date
 }
